@@ -1,38 +1,37 @@
-.App {
-  text-align: center;
+@font-face {
+  font-family: 'Starjedi';
+  src: local('Starjedi'),
+    url(https://s3.us-east-2.amazonaws.com/mrwillybee/fonts/Starjedi.ttf) format('truetype');
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+@font-face {
+  font-family: 'Starjhol';
+  src: local('Starjhol'),
+    url(https://s3.us-east-2.amazonaws.com/mrwillybee/fonts/Starjhol.ttf) format('truetype');
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+#root {
+  min-height: 1000px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.jumbotron {
+  font-family: 'Starjedi',sans-serif;
+  background-image: url('https://s3.us-east-2.amazonaws.com/mrwillybee/images/galaxy_bg_tile.png');
 }
 
-.App-link {
-  color: #61dafb;
+h1.jumbotron-heading {
+  color: #FFFF82;
+  font-weight: bold;
+  text-transform: uppercase;
+  transform: perspective(100px) rotateX(25deg);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.jumbotron .lead {
+  font-family: 'Starjhol',sans-serif;
+  color: #FFFF82;
+}
+
+.jumbotron .alert {
+  height: 20px;
+  color: #FFFF82;
 }
