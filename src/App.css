@@ -20,6 +20,8 @@
 }
 
 h1.jumbotron-heading {
+  width: 80%;
+  margin: 0 auto;
   color: #FFFF82;
   font-weight: bold;
   text-transform: uppercase;

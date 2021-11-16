@@ -26,15 +26,21 @@ const FilmList = ({films, formatDate}) => {
 	const filmList = films.map((film, index) => {
 		return (
 			<li key={index} className="list-group-item">
-				<h5><u>{film.title}</u></h5>
-				
+				<h5><em>{film.title}</em></h5>
 				<p>Released: {formatDate(film.release_date)}</p>
+        {
+          index < films.length - 1 ? <hr className="m-0" /> : null
+        }
 			</li>
 		)	
 	});
 
 	return (
-		<ul className="list-group">{filmList}</ul>
+		<div className="row">
+      <div className="col-md-4">
+        <ul className="list-group">{filmList}</ul>
+      </div>
+    </div>
 	)
 }
 
@@ -124,7 +130,7 @@ function App() {
         <div className="container">
           <h1 className="jumbotron-heading display-4 text-center">star wars</h1>
           <div className="row text-center">
-            <div class="col-md-12">
+            <div className="col-md-12">
               <p className="lead">characters</p>
             </div>
             <div className="col-md-12">
