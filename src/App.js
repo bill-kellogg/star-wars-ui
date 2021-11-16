@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import React from 'react'
 import axios from 'axios'
 import moment from 'moment'
 
@@ -65,9 +65,9 @@ function App() {
     }
   ];
 
-  const [selectedCharacterUrl, setSelectedCharacterUrl] = useState("")
-  const [selectedCharacterFilms, setSelectedCharacterFilms] = useState(null)
-  const [statusMsg, setStatusMsg] = useState(null)
+  const [selectedCharacterUrl, setSelectedCharacterUrl] = React.useState("")
+  const [selectedCharacterFilms, setSelectedCharacterFilms] = React.useState(null)
+  const [statusMsg, setStatusMsg] = React.useState(null)
 
 	function formatDate(apiDate) {
 		return moment(apiDate).format('dddd, MMMM Do YYYY')
