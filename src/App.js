@@ -28,16 +28,13 @@ const FilmList = ({films, formatDate}) => {
 			<li key={index} className="list-group-item">
 				<h5><em>{film.title}</em></h5>
 				<p>Released: {formatDate(film.release_date)}</p>
-        {
-          index < films.length - 1 ? <hr className="m-0" /> : null
-        }
 			</li>
 		)	
 	});
 
 	return (
 		<div className="row">
-      <div className="col-md-4">
+      <div className="col-md-12">
         <ul className="list-group">{filmList}</ul>
       </div>
     </div>
@@ -147,13 +144,11 @@ function App() {
         </div>
       </section>
       
-
-      <div className="container">
+      <div className="container mt-4">
         <FilmList films={selectedCharacterFilms} formatDate={formatDate}/>
       </div>
     </div>
   );
 }
-
 
 export default App;
