@@ -33,8 +33,8 @@ const FilmList = ({films, formatDate}) => {
 	});
 
 	return (
-		<div className="row">
-      <div className="col-md-12">
+		<div className="row justify-content-sm-center">
+      <div className="col col-sm-4">
         <ul className="list-group">{filmList}</ul>
       </div>
     </div>
